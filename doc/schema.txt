@@ -1,0 +1,34 @@
+Client
+-------
+
+Email          :
+StoreHash      :
+bcClientId     :
+bcClientSecret :
+HashCode       :
+Id             :
+
+
+Store
+-----
+
+HashCode       :
+StoreHash      :
+Id             :
+Domain         :
+
+
+Locations
+---------
+
+LocationId      : Internal PK
+StoreHash       : From store table
+LocationName    : Insert
+LocationAddress : Insert
+LocationLat	    : Instert decimal
+LocationLng     : Instert decimal
+
+
+1. A client could own one or more stores
+2. A app can be owned by one or many customers.
+   2.1. An app could be installed to may stores.
