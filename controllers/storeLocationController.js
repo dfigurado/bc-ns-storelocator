@@ -6,6 +6,7 @@ module.exports = {
         var result = await storeLocations.findAll();
         res.json(result);
     },
+    //Id corresponds to HashCode identifer
     findById : async (req,res,next) => {
        var result = await storeLocations.findById({
            where:{
