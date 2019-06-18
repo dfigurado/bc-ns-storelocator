@@ -1,27 +1,33 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('StoreLocations', {
+    return queryInterface.createTable('Clients', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      Lat: {
-        type: Sequelize.FLOAT
-      },
-      Lng: {
-        type: Sequelize.FLOAT
-      },
-      LocationAddress: {
-        type: Sequelize.STRING
-      },
-      LocationName: {
+      Email: {
         type: Sequelize.STRING
       },
       StoreHash: {
         type: Sequelize.STRING
+      },
+      bcClientId: {
+        type: Sequelize.STRING
+      },
+      bcClientSecret: {
+        type: Sequelize.STRING
+      },
+      HashCode: {
+        type: Sequelize.STRING
+      },
+      Id: {
+        type: Sequelize.INTEGER
+      },
+      IsActive: {
+        type: Sequelize.BOOLEAN
       },
       createdAt: {
         allowNull: false,
@@ -34,6 +40,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('StoreLocations');
+    return queryInterface.dropTable('Clients');
   }
 };
